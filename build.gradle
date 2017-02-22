@@ -1,0 +1,29 @@
+group 'org.hrchu'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+
+}
+
+tasks.withType(JavaCompile) {
+    compileJava.options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'com.github.jbellis', name: 'jamm', version: '0.3.1'
+    compile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: '9.3.2.v20150730'
+    compile group: 'org.eclipse.jetty', name: 'jetty-annotations', version: '9.3.2.v20150730'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+
+
+}
+
+
